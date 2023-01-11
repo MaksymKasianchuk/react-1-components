@@ -21,6 +21,9 @@ function App() {
           title="Upload Stats"
           stats={StatisticsData}
         />
+         <Statistics 
+          stats={StatisticsData}
+        />
       </Container>
     </div>
   );

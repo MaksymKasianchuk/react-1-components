@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
-export const ProfileCard = styled.div`
+export const ProfileCard = styled.section`
     background-color: #fff;
-    border 1px solid #e1e7ef;
+    border 1px solid ${props => props.theme.colors.border};
     border-radius: 5px;
     overflow: hidden;
     max-width: 350px;
@@ -11,11 +11,11 @@ export const ProfileCard = styled.div`
 
 export const ProfileDescription = styled.div`
     padding: 20px;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid ${props => props.theme.colors.border};
     &>img{
         width: 150px;
         height: 150px;
-        border: 1px solid #eeeeee;
+        border: 1px solid ${props => props.theme.colors.border};
         border-radius: 50%;
     }
 `;
@@ -29,14 +29,14 @@ export const ProfileName = styled.p`
 
 export const ProfileTag = styled.p`
     font-family: 'Roboto', sans-serif;
-    color: #535559;
+    color: ${props => props.theme.colors.lightText};
     ont-weight: 300;
 `;
 
 export const ProfileLocation = styled.p`
     font-family: 'Roboto', sans-serif;
     ont-weight: 400;
-    color: #535559;
+    color: ${props => props.theme.colors.lightText};
 `;
 
 export const ProfileStats = styled.ul`
@@ -56,7 +56,7 @@ export const ProfileStatCard = styled.li`
     flex-direction: column;
     justify-content: space-around;
     :not(last-child){
-        border-right: 1px solid #eeeeee;
+        border-right: 1px solid ${props => props.theme.colors.border};
     }
     &>.label{
         font-weight:700;
@@ -64,6 +64,6 @@ export const ProfileStatCard = styled.li`
     }
     &>.quantity{
         font-weight:400;
-        color: #535559;
+        color: ${props => props.theme.colors.lightText};
     }
 `;

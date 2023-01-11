@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const StatCard = styled.div`
+export const StatCard = styled.section`
     background-color: #fff;
     border 1px solid #e1e7ef;
     border-radius: 5px;
@@ -22,6 +22,12 @@ export const StatTitle = styled.h2`
     text-transform: uppercase;
 `;
 
+const getCardWidth = ( { numOfItems } ) => {
+    if(numOfItems<=5){
+        return 500/numOfItems - 42;
+    } else { return 500/3 - 42; }
+};
+
 export const StatList = styled.ul`
     display: flex;
     flex-wrap: wrap;
@@ -37,23 +43,18 @@ export const StatList = styled.ul`
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        border-bottom: 1px solid #eeeeee;
+        border-bottom: 1px solid ${props => props.theme.colors.border};
         :not(last-child){
-            border-right: 1px solid #eeeeee;
+            border-right: 1px solid ${props => props.theme.colors.border};
         }
-        width: ${ ({ numOfItems }) => {
-                if(numOfItems<=5){
-                    return 500/numOfItems - 42;
-                } else { return 500/3 - 42; }
-            }
-        }px;
+        width: ${getCardWidth}px;
         &>.label{
             font-weight:700;
             margin-bottom: 10px;
         }
         &>.percentage{
             font-weight:400;
-            color: #535559;
+            color: ${props => props.theme.colors.lightText};
         }
     }
 `;
