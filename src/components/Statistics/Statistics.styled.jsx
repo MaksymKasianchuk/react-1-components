@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 
-export const StatCard = styled.section`
+export const StatCard = styled.div`
     background-color: ${props => props.theme.colors.cardBgColor};
     border 1px solid ${props => props.theme.colors.border};
     border-radius:  ${props => props.theme.radii.cardBorderRadius}px;
     overflow: hidden;
     max-width: 500px;
-    margin: 40px auto;
+    margin: 0 auto;
 `;
 
 export const StatTitle = styled.h2`

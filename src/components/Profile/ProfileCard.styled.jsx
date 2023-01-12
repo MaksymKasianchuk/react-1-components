@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const ProfileCard = styled.section`
+export const ProfileCard = styled.div`
     background-color: ${props => props.theme.colors.cardBgColor};
     border 1px solid ${props => props.theme.colors.border};
     border-radius:  ${props => props.theme.radii.cardBorderRadius}px;

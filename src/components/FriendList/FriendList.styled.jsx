@@ -15,13 +15,15 @@ export const FriendListUl = styled.ul`
 export const FriendListItemWrap = styled.li` 
     width: 100%;
     padding: 20px 20px 20px 40px;
-    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     background-color: ${props => props.theme.colors.cardBgColor};
     border-radius: ${props => props.theme.radii.cardBorderRadius}px;
+    &:not(:last-child){
+        margin-bottom: 10px;
+    }
     &>img{
         width: 48px;
         height: 48px;
