@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 
 export const ProfileCard = styled.section`
-    background-color: #fff;
+    background-color: ${props => props.theme.colors.cardBgColor};
     border 1px solid ${props => props.theme.colors.border};
-    border-radius: 5px;
+    border-radius:  ${props => props.theme.radii.cardBorderRadius}px;
     overflow: hidden;
     max-width: 350px;
     margin: 0 auto;

@@ -1,8 +1,9 @@
 import userData from '../../data/user.json';
 import StatisticsData from '../../data/data.json';
+import friends from '../../data/friends.json';
 import Profile from 'components/Profile';
 import Statistics from 'components/Statistics';
-
+import FriendList from 'components/FriendList';
 import { Container } from './App.styled';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
          <Statistics 
           stats={StatisticsData}
         />
+        <FriendList friends={friends}/>
       </Container>
     </div>
   );

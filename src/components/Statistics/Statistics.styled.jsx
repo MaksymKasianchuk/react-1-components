@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 
 export const StatCard = styled.section`
-    background-color: #fff;
-    border 1px solid #e1e7ef;
-    border-radius: 5px;
+    background-color: ${props => props.theme.colors.cardBgColor};
+    border 1px solid ${props => props.theme.colors.border};
+    border-radius:  ${props => props.theme.radii.cardBorderRadius}px;
     overflow: hidden;
     max-width: 500px;
     margin: 40px auto;
@@ -18,14 +18,14 @@ export const StatTitle = styled.h2`
     line-height: 1.2;
     margin: 0;
     padding: 20px;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid ${props => props.theme.colors.border};
     text-transform: uppercase;
 `;
 
 const getCardWidth = ( { numOfItems } ) => {
     if(numOfItems<=5){
-        return 500/numOfItems - 42;
-    } else { return 500/3 - 42; }
+        return 500/numOfItems;
+    } else { return 500/3}
 };
 
 export const StatList = styled.ul`
